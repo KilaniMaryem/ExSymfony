@@ -1,0 +1,19 @@
+{%extends 'template.html.twig'%}
+
+
+
+{%block body%}
+
+<ol class="list-group">
+    {% for cle,valeur in app.session.get('todos') %}
+        <li class="list-group-item">{{cle|upper}} : {{valeur}}</li>
+    {%endfor%}
+</ol>
+{% endblock%}
+
+{%block title %}
+TODO LIST
+{% endblock%}
+{%block pageTitle %}
+    TODO LIST
+{% endblock%}
